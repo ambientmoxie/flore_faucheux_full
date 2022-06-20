@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'karrik reg';
+  src: url("../font/Karrik-Regular.woff2") format("woff2"), url("../font/Karrik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'karrik it';
+  src: url("../font/Karrik-Italic.woff2") format("woff2"), url("../font/Karrik-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+#main-content {
+  padding: 1em;
+}
+
+section {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+section:not(:last-child) {
+  border-bottom: none;
+}
+
+section .inner-content {
+  overflow: hidden;
+  height: auto;
+  max-height: 0;
+  -webkit-transition: .2s max-height ease;
+  transition: .2s max-height ease;
+}
+
+p {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 3.5em;
+}
+
+h1 {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+}

@@ -1,0 +1,51 @@
+@import "partials/fonts";
+@import "partials/variables";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+#main-content {
+  padding: 1em;
+}
+
+section {
+  border-top: $border solid black;
+  border-bottom: $border solid black;
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+  .inner-content {
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    //background-color: red;
+    transition: .2s max-height ease;
+  }
+}
+
+p {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 3.5em;
+}
+
+h1 {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
