@@ -27,12 +27,34 @@ section {
   &:not(:last-child) {
     border-bottom: none;
   }
+  &:last-child {
+    transition: 0.3s padding-left;
+    h1:after {
+      content: url('../img/arrow_2.svg');
+      display: inline-block;
+      width: 55px;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.1s, transform 0.2s;
+      transform: translate(-5px,6px);
+    }
+    h1:hover:after {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(10px,6px);
+      transition-delay: 0s;
+    }
+    &:hover {
+      padding-left: 30px;
+    }
+  }
+
   .inner-content {
     overflow: hidden;
     height: auto;
     max-height: 0;
     //background-color: red;
-    transition: .2s max-height ease;
+    transition: 0.2s max-height ease;
   }
 }
 

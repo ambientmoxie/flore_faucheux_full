@@ -45,12 +45,44 @@ section:not(:last-child) {
   border-bottom: none;
 }
 
+section:last-child {
+  -webkit-transition: 0.3s padding-left;
+  transition: 0.3s padding-left;
+}
+
+section:last-child h1:after {
+  content: url("../img/arrow_2.svg");
+  display: inline-block;
+  width: 55px;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.2s;
+  transition: opacity 0.1s, -webkit-transform 0.2s;
+  transition: opacity 0.1s, transform 0.2s;
+  transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translate(-5px, 6px);
+          transform: translate(-5px, 6px);
+}
+
+section:last-child h1:hover:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(10px, 6px);
+          transform: translate(10px, 6px);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+section:last-child:hover {
+  padding-left: 30px;
+}
+
 section .inner-content {
   overflow: hidden;
   height: auto;
   max-height: 0;
-  -webkit-transition: .2s max-height ease;
-  transition: .2s max-height ease;
+  -webkit-transition: 0.2s max-height ease;
+  transition: 0.2s max-height ease;
 }
 
 p {
