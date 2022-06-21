@@ -26,6 +26,11 @@ html {
           box-sizing: border-box;
 }
 
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -37,38 +42,70 @@ body {
 }
 
 section {
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border-top: 5px solid #000000;
+  border-bottom: 5px solid #000000;
 }
 
 section:not(:last-child) {
   border-bottom: none;
 }
 
-section:last-child {
-  -webkit-transition: 0.3s padding-left;
-  transition: 0.3s padding-left;
+section:nth-child(4) {
+  -webkit-transition: 0.2s padding-left;
+  transition: 0.2s padding-left;
 }
 
-section:last-child h1:after {
-  content: url("../img/arrow_2.svg");
+section:nth-child(4) h1:after {
+  content: url("../img/arrow_3.svg");
   display: inline-block;
-  width: 55px;
+  width: 60px;
   height: auto;
   opacity: 0;
   -webkit-transition: opacity 0.1s, -webkit-transform 0.2s;
   transition: opacity 0.1s, -webkit-transform 0.2s;
   transition: opacity 0.1s, transform 0.2s;
   transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transform: translate(-5px, 6px);
-          transform: translate(-5px, 6px);
+  -webkit-transform: translate(-5px, 3px) rotate(0deg);
+          transform: translate(-5px, 3px) rotate(0deg);
+}
+
+section:nth-child(4) h1:hover:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 3px) rotate(90deg);
+          transform: translate(0px, 3px) rotate(90deg);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+section:nth-child(4):hover {
+  padding-left: 30px;
+}
+
+section:last-child {
+  -webkit-transition: 0.2s padding-left;
+  transition: 0.2s padding-left;
+}
+
+section:last-child h1:after {
+  content: url("../img/arrow_2.svg");
+  display: inline-block;
+  width: 60px;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.2s;
+  transition: opacity 0.1s, -webkit-transform 0.2s;
+  transition: opacity 0.1s, transform 0.2s;
+  transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translate(-5px, 6px) rotate(0deg);
+          transform: translate(-5px, 6px) rotate(0deg);
 }
 
 section:last-child h1:hover:after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(10px, 6px);
-          transform: translate(10px, 6px);
+  -webkit-transform: translate(10px, 6px) rotate(-45deg);
+          transform: translate(10px, 6px) rotate(-45deg);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }

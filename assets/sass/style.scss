@@ -11,6 +11,11 @@ html {
   box-sizing: border-box;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -22,26 +27,47 @@ body {
 }
 
 section {
-  border-top: $border solid black;
-  border-bottom: $border solid black;
+  border-top: $border solid $primary;
+  border-bottom: $border solid $primary;
   &:not(:last-child) {
     border-bottom: none;
   }
-  &:last-child {
-    transition: 0.3s padding-left;
+  &:nth-child(4) {
+    transition: 0.2s padding-left;
     h1:after {
-      content: url('../img/arrow_2.svg');
+      content: url("../img/arrow_3.svg");
       display: inline-block;
-      width: 55px;
+      width: 60px;
       height: auto;
       opacity: 0;
       transition: opacity 0.1s, transform 0.2s;
-      transform: translate(-5px,6px);
+      transform: translate(-5px, 3px) rotate(0deg);
     }
     h1:hover:after {
       opacity: 1;
       visibility: visible;
-      transform: translate(10px,6px);
+      transform: translate(0px, 3px) rotate(90deg);
+      transition-delay: 0s;
+    }
+    &:hover {
+      padding-left: 30px;
+    }
+  }
+  &:last-child {
+    transition: 0.2s padding-left;
+    h1:after {
+      content: url("../img/arrow_2.svg");
+      display: inline-block;
+      width: 60px;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.1s, transform 0.2s;
+      transform: translate(-5px, 6px) rotate(0deg);
+    }
+    h1:hover:after {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(10px, 6px) rotate(-45deg);
       transition-delay: 0s;
     }
     &:hover {
