@@ -1,5 +1,7 @@
 const headers = document.getElementsByTagName("h1");
 
+// HOVER
+
 for (let index = 0; index < headers.length - 2; index++) {
   const parent = headers[index].parentElement;
   const article = headers[index].nextElementSibling;
@@ -17,6 +19,8 @@ for (let index = 0; index < headers.length - 2; index++) {
   });
 }
 
+// ACCORDION
+
 for (let index = 0; index < headers.length; index++) {
   headers[index].addEventListener("click", openCurrAccordion);
   
@@ -32,7 +36,11 @@ function openCurrAccordion(e) {
     } else {
       parent.classList.remove("open");
       article.style.maxHeight = "0px";
+      console.log(article);
     }
   }
 }
+
+
+
 
