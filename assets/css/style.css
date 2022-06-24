@@ -63,11 +63,18 @@
   cursor: grab;
 }
 
+#artwork-slider .keen-slider__slide img {
+  width: 120%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
 [class^="number-slide"],
 [class*=" number-slide"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #0000ff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -79,45 +86,6 @@
   font-weight: 500;
   height: 450px;
   max-height: 100vh;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-img {
-  width: 110%;
-  height: auto;
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
-}
-
-p {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 3.5em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
-
-h1 {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 6.3em;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
 #size-info {
@@ -136,23 +104,124 @@ h1 {
   bottom: 0;
   padding: 0;
   margin: 0;
-  font-size: .5em;
-  color: black;
+  font-size: 0.5em;
+  color: #ffffff;
+}
+
+#fullScreenAsap {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#fullScreenAsap img {
+  width: 50%;
+  height: auto;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+p {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 3.5em;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  color: #000000;
+}
+
+h1 {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+
+h1:hover {
+  color: #eaff02;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
+  background-color: #0000ff;
+  overflow-x: hidden;
+}
+
+#asap {
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+#asap img {
+  width: 100%;
+  height: auto;
+}
+
+#asap:hover {
+  bottom: -40px;
+  right: -50px;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
 }
 
 #main-content {
-  padding: 1em;
+  padding: 1em 2em 2em 2em;
+  padding: 0 1em 1em 1em;
+  height: 100vh;
+}
+
+polygon {
+  fill: #ab7c94;
+}
+
+::after {
+  position: absolute;
 }
 
 section {
-  border-top: 5px solid #000000;
-  border-bottom: 5px solid #000000;
+  border-top: 5px solid #ffffff;
+  border-bottom: 5px solid #ffffff;
 }
 
 section p {
@@ -160,11 +229,15 @@ section p {
 }
 
 section p:first-child {
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 section:not(:last-child) {
   border-bottom: none;
+}
+
+section:first-child {
+  border-top: none;
 }
 
 section:nth-child(4) {
@@ -173,7 +246,7 @@ section:nth-child(4) {
 }
 
 section:nth-child(4) h1:after {
-  content: url("../img/arrow_3.svg");
+  content: url("data:image/svg+xml,%3Csvg version='1.1' id='Calque_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 500 500' style='enable-background:new 0 0 500 500;' xml:space='preserve'%3E%3Cpolygon fill='%23eaff02' points='247.6,34.3 205.2,76.7 344.8,216.4 46.7,216.4 46.7,276.3 344.8,276.3 205.2,416 247.6,458.4 459.6,246.3 '/%3E%3C/svg%3E");
   display: inline-block;
   width: 60px;
   height: auto;
@@ -182,15 +255,15 @@ section:nth-child(4) h1:after {
   transition: opacity 0.1s, -webkit-transform 0.2s;
   transition: opacity 0.1s, transform 0.2s;
   transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transform: translate(-5px, 3px) rotate(0deg);
-          transform: translate(-5px, 3px) rotate(0deg);
+  -webkit-transform: translate(-5px, 0px) rotate(0deg);
+          transform: translate(-5px, 0px) rotate(0deg);
 }
 
 section:nth-child(4) h1:hover:after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(0px, 3px) rotate(90deg);
-          transform: translate(0px, 3px) rotate(90deg);
+  -webkit-transform: translate(0px, 0px) rotate(90deg);
+          transform: translate(0px, 0px) rotate(90deg);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
@@ -205,7 +278,7 @@ section:last-child {
 }
 
 section:last-child h1:after {
-  content: url("../img/arrow_2.svg");
+  content: url("data:image/svg+xml,%3Csvg version='1.1' id='Calque_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 500 500' style='enable-background:new 0 0 500 500;' xml:space='preserve'%3E%3Cpolygon fill='%23eaff02' points='278.6,34.3 236.2,76.7 375.8,216.4 17.7,216.4 17.7,276.3 375.8,276.3 236.2,416 278.6,458.4 490.6,246.3 '/%3E%3C/svg%3E");
   display: inline-block;
   width: 60px;
   height: auto;
@@ -214,15 +287,15 @@ section:last-child h1:after {
   transition: opacity 0.1s, -webkit-transform 0.2s;
   transition: opacity 0.1s, transform 0.2s;
   transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transform: translate(-5px, 6px) rotate(0deg);
-          transform: translate(-5px, 6px) rotate(0deg);
+  -webkit-transform: translate(-5px, 3px) rotate(0deg);
+          transform: translate(-5px, 3px) rotate(0deg);
 }
 
 section:last-child h1:hover:after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(10px, 6px) rotate(-45deg);
-          transform: translate(10px, 6px) rotate(-45deg);
+  -webkit-transform: translate(10px, 3px) rotate(-45deg);
+          transform: translate(10px, 3px) rotate(-45deg);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
@@ -237,5 +310,22 @@ section .inner-content {
   max-height: 0;
   -webkit-transition: 0.2s max-height ease;
   transition: 0.2s max-height ease;
+}
+
+#is-mobile-ready {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 200px;
+    background-color: white;
+  }
+  #is-mobile-ready {
+    display: block;
+  }
+  #asap, #main-content {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

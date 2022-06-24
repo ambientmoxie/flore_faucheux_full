@@ -1,0 +1,14 @@
+#fullScreenAsap {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    cursor: pointer;
+    img {
+        width: 50%;
+        height: auto;
+    }
+}

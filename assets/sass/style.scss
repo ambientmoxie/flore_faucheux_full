@@ -1,6 +1,7 @@
 @import "partials/fonts";
 @import "partials/variables";
 @import "partials/slider";
+@import "partials/asap";
 
 html {
   box-sizing: border-box;
@@ -10,11 +11,6 @@ html {
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-img {
-  width: 110%;
-  height: auto;
 }
 
 a {
@@ -27,6 +23,7 @@ p {
   margin: 0;
   font-size: 3.5em;
   hyphens: auto;
+  color: $primary;
 }
 
 h1 {
@@ -35,50 +32,97 @@ h1 {
   font-size: 6.3em;
   text-transform: uppercase;
   cursor: pointer;
+  color: $secondary;
+  transition: 0.2s color;
 }
 
-#size-info {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  inset: 0;
-  
-  p{
-    position: absolute;
-    bottom: 0;
-    padding: 0;
-    margin: 0;
-    font-size: .5em;
-    color: black;
-  }
+h1:hover {
+  color: $apple-green;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
+  background-color: $blue;
+  overflow-x: hidden;
+}
+
+#asap {
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 300px;
+  height: 300px;
+  //background-color: $blue;
+  transform: rotate(-45deg);
+  transition: 0.2s all;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &:hover {
+    bottom: -40px;
+    right: -50px;
+    transform: rotate(-35deg);
+  }
 }
 
 #main-content {
-  padding: 1em;
+  padding: 1em 2em 2em 2em;
+  padding: 0 1em 1em 1em;
+  height: 100vh;
+}
+
+polygon {
+  fill: #ab7c94;
+}
+
+::after {
+  position: absolute;
 }
 
 section {
-  border-top: $border solid $primary;
-  border-bottom: $border solid $primary;
+  border-top: $border solid $secondary;
+  border-bottom: $border solid $secondary;
   p {
     padding-bottom: 1em;
-    &:first-child{
-      padding-top: .5em;
-    }  
+    &:first-child {
+      padding-top: 0.5em;
+    }
   }
   &:not(:last-child) {
     border-bottom: none;
   }
+  &:first-child {
+    border-top: none;
+  }
   &:nth-child(4) {
     transition: 0.2s padding-left;
     h1:after {
-      content: url("../img/arrow_3.svg");
+      content: url("data:image/svg+xml,%3Csvg version='1.1' id='Calque_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 500 500' style='enable-background:new 0 0 500 500;' xml:space='preserve'%3E%3Cpolygon fill='%23eaff02' points='247.6,34.3 205.2,76.7 344.8,216.4 46.7,216.4 46.7,276.3 344.8,276.3 205.2,416 247.6,458.4 459.6,246.3 '/%3E%3C/svg%3E");
+      display: inline-block;
+      width: 60px;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.1s, transform 0.2s;
+      transform: translate(-5px, 0px) rotate(0deg);
+    }
+    h1:hover:after {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0px, 0px) rotate(90deg);
+      transition-delay: 0s;
+    }
+    &:hover {
+      padding-left: 30px;
+    }
+  }
+  &:last-child {
+    transition: 0.2s padding-left;
+    h1:after {
+      content: url("data:image/svg+xml,%3Csvg version='1.1' id='Calque_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 500 500' style='enable-background:new 0 0 500 500;' xml:space='preserve'%3E%3Cpolygon fill='%23eaff02' points='278.6,34.3 236.2,76.7 375.8,216.4 17.7,216.4 17.7,276.3 375.8,276.3 236.2,416 278.6,458.4 490.6,246.3 '/%3E%3C/svg%3E");
       display: inline-block;
       width: 60px;
       height: auto;
@@ -89,28 +133,7 @@ section {
     h1:hover:after {
       opacity: 1;
       visibility: visible;
-      transform: translate(0px, 3px) rotate(90deg);
-      transition-delay: 0s;
-    }
-    &:hover {
-      padding-left: 30px;
-    }
-  }
-  &:last-child {
-    transition: 0.2s padding-left;
-    h1:after {
-      content: url("../img/arrow_2.svg");
-      display: inline-block;
-      width: 60px;
-      height: auto;
-      opacity: 0;
-      transition: opacity 0.1s, transform 0.2s;
-      transform: translate(-5px, 6px) rotate(0deg);
-    }
-    h1:hover:after {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(10px, 6px) rotate(-45deg);
+      transform: translate(10px, 3px) rotate(-45deg);
       transition-delay: 0s;
     }
     &:hover {
@@ -127,4 +150,6 @@ section {
   }
 }
 
+// Temporaire
 
+@import "partials/mobile";

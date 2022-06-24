@@ -1,0 +1,21 @@
+#is-mobile-ready {
+    display: none;
+  }
+  
+  
+  @media (max-width: 767px) {
+  
+    body {
+      font-size: 200px;
+      background-color: white;
+    }
+    
+    #is-mobile-ready {
+      display: block;
+    }
+  
+    #asap, #main-content {
+      display: none;
+    }
+    
+  }

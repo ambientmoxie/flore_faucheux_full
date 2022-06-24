@@ -4,7 +4,7 @@ const slider = new KeenSlider("#artwork-slider", {
   loop: true,
   mode: "free",
   slides: {
-    perView: 3,
+    perView: 4,
     spacing: 15,
   },
 });
@@ -19,12 +19,16 @@ for (let index = 0; index < sculptures.length; index++) {
     let artworkSizing = currentElChild.dataset.size;
     const sizeInfoTxt = document.createElement("p");
     sizeInfoTxt.innerHTML = artworkSizing;
+    currentElChild.style.mixBlendMode = "normal";
 
     currentEl.appendChild(sizeInfo);
     sizeInfo.appendChild(sizeInfoTxt);
   });
   sculptures[index].addEventListener("mouseleave", e => {
+    let currentEl = e.target;
+    let currentElChild = currentEl.firstChild;
     const lastEl = document.getElementById("size-info");
     lastEl.remove();
+    currentElChild.style.mixBlendMode = "multiply";
   });
 }
