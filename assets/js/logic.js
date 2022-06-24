@@ -23,7 +23,6 @@ for (let index = 0; index < headers.length - 2; index++) {
 
 for (let index = 0; index < headers.length; index++) {
   headers[index].addEventListener("click", openCurrAccordion);
-  
 }
 
 function openCurrAccordion(e) {
@@ -36,7 +35,6 @@ function openCurrAccordion(e) {
     } else {
       parent.classList.remove("open");
       article.style.maxHeight = "0px";
-      console.log(article);
     }
   }
 }
