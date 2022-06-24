@@ -16,6 +16,21 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 3.5em;
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -29,6 +44,12 @@ body {
 section {
   border-top: $border solid $primary;
   border-bottom: $border solid $primary;
+  p {
+    &:first-child{
+      padding-top: .5em;
+      hyphens: auto;
+    }  
+  }
   &:not(:last-child) {
     border-bottom: none;
   }
@@ -84,16 +105,3 @@ section {
   }
 }
 
-p {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 3.5em;
-}
-
-h1 {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 6.3em;
-  text-transform: uppercase;
-  cursor: pointer;
-}

@@ -31,6 +31,21 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 3.5em;
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-family: "karrik reg";
+  margin: 0;
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,6 +59,13 @@ body {
 section {
   border-top: 5px solid #000000;
   border-bottom: 5px solid #000000;
+}
+
+section p:first-child {
+  padding-top: .5em;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 section:not(:last-child) {
@@ -121,17 +143,4 @@ section .inner-content {
   -webkit-transition: 0.2s max-height ease;
   transition: 0.2s max-height ease;
 }
-
-p {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 3.5em;
-}
-
-h1 {
-  font-family: "karrik reg";
-  margin: 0;
-  font-size: 6.3em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
+/*# sourceMappingURL=style.css.map */
