@@ -29,6 +29,6 @@ for (let index = 0; index < sculptures.length; index++) {
     let currentElChild = currentEl.firstChild;
     const lastEl = document.getElementById("size-info");
     lastEl.remove();
-    currentElChild.style.mixBlendMode = "multiply";
+    //currentElChild.style.mixBlendMode = "multiply";
   });
 }

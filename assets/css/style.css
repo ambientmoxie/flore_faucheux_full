@@ -66,7 +66,6 @@
 #artwork-slider .keen-slider__slide img {
   width: 120%;
   height: auto;
-  mix-blend-mode: multiply;
 }
 
 [class^="number-slide"],
