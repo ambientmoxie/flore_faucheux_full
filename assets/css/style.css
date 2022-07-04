@@ -155,7 +155,7 @@ a {
 }
 
 a {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -166,7 +166,7 @@ p {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 h1 {
@@ -367,7 +367,7 @@ section .inner-content {
     -webkit-hyphens: auto;
         -ms-hyphens: auto;
             hyphens: auto;
-    color: #000000;
+    color: #FFFFFF;
   }
 }
 /*# sourceMappingURL=style.css.map */
