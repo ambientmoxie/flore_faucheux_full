@@ -10,5 +10,5 @@ document.getElementById("clipboard-mail").addEventListener("click", e => {
   e.preventDefault();
   copyTargetText(e);
   const copyAlert = document.getElementById("copy-alert");
-  copyAlert.innerText = `"${e.target.getAttribute("data-mail")}" copied to clipboard`;
+  copyAlert.innerText = `"${e.target.getAttribute("data-mail")}"`;
 });

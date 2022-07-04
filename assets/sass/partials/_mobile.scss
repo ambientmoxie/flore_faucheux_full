@@ -1,21 +1,40 @@
-#is-mobile-ready {
-    display: none;
+@media (max-width: 767px) {
+
+  header {
+    font-size: 5em;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+  section {
+    border-top: $borderMob solid $secondary;
+    border-bottom: $borderMob solid $secondary;
+    &:nth-child(4) {
+      h1:after {
+        width: 40px;
+        transform: 0;
+      }
+      &:hover {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      h1:after {
+        width: 40px;
+      }
+      &:hover {
+        padding-left: 0;
+      }
+    }
+  }
+
+  p {
+    font-family: "karrik reg";
+    margin: 0;
+    font-size: 1.8em;
+    hyphens: auto;
+    color: $primary;
   }
   
-  
-  @media (max-width: 767px) {
-  
-    body {
-      font-size: 200px;
-      background-color: white;
-    }
-    
-    #is-mobile-ready {
-      display: block;
-    }
-  
-    #asap, #main-content {
-      display: none;
-    }
-    
-  }
+}

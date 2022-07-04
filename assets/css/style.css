@@ -141,6 +141,19 @@ html {
           box-sizing: border-box;
 }
 
+button,
+textarea,
+input,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 a {
   color: #000000;
   text-decoration: none;
@@ -165,9 +178,26 @@ h1 {
   color: #ffffff;
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
+  font-weight: normal;
 }
 
 h1:hover {
+  color: #eaff02;
+}
+
+header {
+  font-family: "karrik reg";
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+  padding-left: 16px;
+  padding-left: 0.1em;
+}
+
+header:hover {
   color: #eaff02;
 }
 
@@ -205,9 +235,7 @@ body {
 }
 
 #main-content {
-  padding: 1em 2em 2em 2em;
   padding: 0 1em 1em 1em;
-  height: 100vh;
 }
 
 polygon {
@@ -233,10 +261,6 @@ section p:first-child {
 
 section:not(:last-child) {
   border-bottom: none;
-}
-
-section:first-child {
-  border-top: none;
 }
 
 section:nth-child(4) {
@@ -311,20 +335,39 @@ section .inner-content {
   transition: 0.2s max-height ease;
 }
 
-#is-mobile-ready {
-  display: none;
-}
-
 @media (max-width: 767px) {
-  body {
-    font-size: 200px;
-    background-color: white;
+  header {
+    font-size: 5em;
   }
-  #is-mobile-ready {
-    display: block;
+  h1 {
+    font-size: 5em;
   }
-  #asap, #main-content {
-    display: none;
+  section {
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+  }
+  section:nth-child(4) h1:after {
+    width: 40px;
+    -webkit-transform: 0;
+            transform: 0;
+  }
+  section:nth-child(4):hover {
+    padding-left: 0;
+  }
+  section:last-child h1:after {
+    width: 40px;
+  }
+  section:last-child:hover {
+    padding-left: 0;
+  }
+  p {
+    font-family: "karrik reg";
+    margin: 0;
+    font-size: 1.8em;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    color: #000000;
   }
 }
 /*# sourceMappingURL=style.css.map */

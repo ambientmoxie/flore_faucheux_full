@@ -13,6 +13,21 @@ html {
   box-sizing: border-box;
 }
 
+button,
+textarea,
+input,
+select,
+a{
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ -webkit-tap-highlight-color: transparent;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+  user-select: none;
+
+}
+
 a {
   color: $primary;
   text-decoration: none;
@@ -34,10 +49,24 @@ h1 {
   cursor: pointer;
   color: $secondary;
   transition: 0.2s color;
+  font-weight: normal;
+  &:hover {
+    color: $apple-green;
+  }
 }
 
-h1:hover {
-  color: $apple-green;
+header {
+  font-family: "karrik reg";
+  font-size: 6.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $secondary;
+  transition: 0.2s color;
+  padding-left: 16px;
+  padding-left: 0.1em;
+  &:hover {
+    color: $apple-green;
+  }
 }
 
 body {
@@ -70,9 +99,9 @@ body {
 }
 
 #main-content {
-  padding: 1em 2em 2em 2em;
+  //padding: 1em 2em 2em 2em;
   padding: 0 1em 1em 1em;
-  height: 100vh;
+  // height: 100vh;
 }
 
 polygon {
@@ -95,9 +124,9 @@ section {
   &:not(:last-child) {
     border-bottom: none;
   }
-  &:first-child {
-    border-top: none;
-  }
+  // &:first-child {
+  //   border-top: none;
+  // }
   &:nth-child(4) {
     transition: 0.2s padding-left;
     h1:after {

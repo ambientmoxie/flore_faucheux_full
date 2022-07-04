@@ -1,13 +1,31 @@
 const sculptures = document.getElementsByClassName("keen-slider__slide");
 
-const slider = new KeenSlider("#artwork-slider", {
-  loop: true,
-  mode: "free",
-  slides: {
-    perView: 4,
-    spacing: 15,
-  },
-});
+let slider = new KeenSlider("#artwork-slider");
+
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  slider = new KeenSlider("#artwork-slider", {
+    loop: true,
+    mode: "free",
+    slides: {
+      perView: 1,
+      spacing: 15,
+    },
+  });
+} else {
+  slider = new KeenSlider("#artwork-slider", {
+    loop: true,
+    mode: "free",
+    slides: {
+      perView: 4,
+      spacing: 15,
+    },
+  });
+}
+
 
 for (let index = 0; index < sculptures.length; index++) {
   sculptures[index].addEventListener("mouseenter", e => {

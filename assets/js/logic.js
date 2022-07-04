@@ -39,6 +39,19 @@ function openCurrAccordion(e) {
   }
 }
 
+// Check if on mobile device or not 
+
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  const name = document.getElementById("naming");
+  name.innerHTML = "F.FAUCHEUX";
+}
+
+
+
 
 
 
