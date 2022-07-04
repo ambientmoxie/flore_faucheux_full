@@ -64,9 +64,9 @@ header {
   transition: 0.2s color;
   padding-left: 16px;
   padding-left: 0.1em;
-  &:hover {
-    color: $apple-green;
-  }
+  // &:hover {
+  //   color: $apple-green;
+  // }
 }
 
 body {

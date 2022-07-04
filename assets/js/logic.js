@@ -46,12 +46,10 @@ if (
     navigator.userAgent
   )
 ) {
-  const name = document.getElementById("naming");
-  name.innerHTML = "F.FAUCHEUX";
+  document.getElementById("naming").innerHTML = "F.FAUCHEUX";
 }
 
-
-
-
-
+document.getElementById("naming").addEventListener('click', () => {
+  window.location.reload();
+})
 

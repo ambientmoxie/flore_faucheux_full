@@ -197,10 +197,6 @@ header {
   padding-left: 0.1em;
 }
 
-header:hover {
-  color: #eaff02;
-}
-
 body {
   margin: 0;
   padding: 0;
