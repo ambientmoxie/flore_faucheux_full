@@ -64,8 +64,8 @@
 }
 
 #artwork-slider .keen-slider__slide img {
-  width: auto;
-  height: 115%;
+  width: 100%;
+  height: auto;
 }
 
 [class^="number-slide"],
@@ -360,6 +360,14 @@ section .inner-content {
   transition: 0.2s max-height ease;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #artwork-slider .keen-slider__slide img {
+    width: 90%;
+    height: auto;
+  }
+  /* CSS */
+}
+
 @media (max-width: 767px) {
   header {
     font-size: 5em;
@@ -394,8 +402,11 @@ section .inner-content {
             hyphens: auto;
     color: #FFFFFF;
   }
+  #artwork-slider {
+    padding: 0;
+  }
   #artwork-slider .keen-slider__slide img {
-    width: 110%;
+    width: 100%;
     height: auto;
   }
 }
