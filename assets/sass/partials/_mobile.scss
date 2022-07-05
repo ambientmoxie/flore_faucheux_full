@@ -36,5 +36,14 @@
     hyphens: auto;
     color: $primary;
   }
+
+  #artwork-slider {
+    .keen-slider__slide {
+      img {
+        width: 110%;
+        height: auto;
+      }
+    }
+  }
   
 }

@@ -2,6 +2,7 @@
 @import "partials/variables";
 @import "partials/slider";
 @import "partials/asap";
+@import "partials/scrollbar";
 
 html {
   box-sizing: border-box;
@@ -13,19 +14,22 @@ html {
   box-sizing: border-box;
 }
 
-button,
-textarea,
-input,
-select,
-a{
- -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
- -webkit-tap-highlight-color: transparent;
- -webkit-user-select: none;
- -khtml-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
-  user-select: none;
+::selection {
+  background: $apple-green;
+  color: black;
+}
 
+input,
+textarea,
+div,
+button,
+select,
+section,
+header,
+a {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a {
@@ -62,8 +66,7 @@ header {
   cursor: pointer;
   color: $secondary;
   transition: 0.2s color;
-  padding-left: 16px;
-  padding-left: 0.1em;
+  padding-left: 0.15em;
   // &:hover {
   //   color: $apple-green;
   // }
