@@ -23,7 +23,6 @@ for (let index = 0; index < sculptures.length; index++) {
   sculptures[index].addEventListener("mouseenter", e => {
     let currentEl = e.target;
     let currentElChild = currentEl.childNodes[1];
-    console.log(currentElChild);
     const sizeInfo = document.createElement("div");
     sizeInfo.id = "size-info";
 
