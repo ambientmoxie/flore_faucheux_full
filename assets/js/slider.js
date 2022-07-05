@@ -18,7 +18,6 @@ let slider = new KeenSlider("#artwork-slider", {
   slides: { perView: 1 },
 });
 
-
 for (let index = 0; index < sculptures.length; index++) {
   sculptures[index].addEventListener("mouseenter", e => {
     let currentEl = e.target;
