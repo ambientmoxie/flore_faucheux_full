@@ -3,6 +3,7 @@
 @import "partials/slider";
 @import "partials/asap";
 @import "partials/scrollbar";
+@import "partials/video";
 
 html {
   box-sizing: border-box;
@@ -25,7 +26,6 @@ div,
 button,
 select,
 section,
-header,
 a {
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: none;
@@ -59,24 +59,23 @@ h1 {
   }
 }
 
-header {
-  font-family: "karrik reg";
-  font-size: 6.3em;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: $secondary;
-  transition: 0.2s color;
-  padding-left: 0.15em;
-  // &:hover {
-  //   color: $apple-green;
-  // }
-}
+// header {
+//   font-family: "karrik reg";
+//   font-size: 6.3em;
+//   text-transform: uppercase;
+//   cursor: pointer;
+//   color: $secondary;
+//   transition: 0.2s color;
+//   padding-left: 0.15em;
+//   // &:hover {
+//   //   color: $apple-green;
+//   // }
+// }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
-  background-color: $blue;
   overflow-x: hidden;
 }
 
@@ -127,9 +126,9 @@ section {
   &:not(:last-child) {
     border-bottom: none;
   }
-  // &:first-child {
-  //   border-top: none;
-  // }
+  &:first-child {
+    border-top: none;
+  }
   &:nth-child(4) {
     transition: 0.2s padding-left;
     h1:after {
@@ -179,6 +178,22 @@ section {
     max-height: 0;
     //background-color: red;
     transition: 0.2s max-height ease;
+  }
+}
+
+#animated-name {
+  position: fixed;
+  pointer-events: none;
+  margin-right:3em;
+  // margin-bottom: -2em;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: auto;
+  // background-color: blue;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 

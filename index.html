@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/ico/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/ico/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ico/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/ico/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/logic.js" defer></script>
     <script src="./assets/js/clipboard.js" defer></script>
@@ -16,7 +30,21 @@
     <!-- <div id="asap">
       <img src="./assets/img/asap.png" alt="asap face">
     </div> -->
-    <header id="naming">flore faucheux</header>
+    <!-- <header id="naming">flore faucheux</header> -->
+    <video id="background-video" autoplay loop muted playsinline>
+      <source
+        src="./assets/video/bg_color.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="./assets/video/bg_color.wemb"
+        type="video/webm"
+      />
+      <source
+        src="./assets/video/bg_color.ogg"
+        type="video/ogg"
+      />
+    </video>
     <main id="main-content">
       <section class="first-title">
         <h1>gallery</h1>
@@ -250,7 +278,7 @@
         </div>
       </section>
       <section class="first-title">
-        <h1>ABOUT</h1>
+        <h1>BIO</h1>
         <div class="inner-content">
           <p>
             Peintre, dessinatrice, mosaïste et céramiste Flore Faucheux est une
@@ -311,7 +339,9 @@
         </div>
       </section>
       <section class="first-title">
-        <h1 id="clipboard-mail" data-mail="faucheuxflore@hotmail.fr">contact</h1>
+        <h1 id="clipboard-mail" data-mail="faucheuxflore@hotmail.fr">
+          contact
+        </h1>
         <div class="inner-content">
           <a href="mailto:faucheuxflore@hotmail.fr"
             ><p id="copy-alert">This is the content test</p></a
@@ -325,9 +355,14 @@
       </section>
     </main>
 
+    <footer id="animated-name">
+      <img src="./assets/img/ff_name.gif" alt="animated flore name">
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
     <!-- <script src="./assets/js/data.js"></script> -->
     <script src="./assets/js/slider.js"></script>
+    <!-- <script src="./assets/js/disableTouch.js"></script> -->
     <!-- <script src="./assets/js/asap.js"></script> -->
   </body>
 </html>

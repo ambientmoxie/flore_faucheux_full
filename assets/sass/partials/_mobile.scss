@@ -1,5 +1,4 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
   #artwork-slider {
     .keen-slider__slide {
       img {
@@ -8,13 +7,11 @@
       }
     }
   }
-  
+
   /* CSS */
-  
 }
 
 @media (max-width: 767px) {
-
   header {
     font-size: 5em;
   }
@@ -27,8 +24,9 @@
     border-bottom: $borderMob solid $secondary;
     &:nth-child(4) {
       h1:after {
-        width: 40px;
-        transform: 0;
+        display: none;
+        // width: 40px;
+        // transform: 0;
       }
       &:hover {
         padding-left: 0;
@@ -36,7 +34,8 @@
     }
     &:last-child {
       h1:after {
-        width: 40px;
+        display: none;
+        // width: 40px;
       }
       &:hover {
         padding-left: 0;
@@ -61,5 +60,13 @@
       }
     }
   }
-  
+
+  #animated-name {
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    height: auto;
+  }
 }
